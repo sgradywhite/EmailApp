@@ -12,8 +12,7 @@ class UsersController < ApplicationController
  def show
      @user = User.find(params[:id])
      if @user.activated?
-         redirect_to "/#{@user.role}_page
-         "
+         redirect_to "/#{@user.role}_page"
      else
          redirect_to root_url
      end
