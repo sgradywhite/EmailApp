@@ -92,9 +92,16 @@ Rails.application.routes.draw do
     get    'login'   => 'sessions#new'
     post   'login'   => 'sessions#create'
     delete 'logout'  => 'sessions#destroy'
+    
     get    'userappointment' => 'users#appointment'
+    get    'userdatabase' => 'users#database'
+    
+        get 'admin_page' => 'users#admin_page'
+    get 'doctor_page' => 'users#doctor_page'
+    get 'office_page' => 'users#office_page'
+    get 'patient_page' => 'users#patient_page'
 
-    resources :users 
+    resources :users
     resources :account_activations, only: [:edit]
     resources :password_resets,     only: [:new, :create, :edit, :update]
 

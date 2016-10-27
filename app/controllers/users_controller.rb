@@ -11,13 +11,30 @@ class UsersController < ApplicationController
 
  def show
      @user = User.find(params[:id])
-     redirect_to root_url and return unless @user.activated?
+     if @user.activated?
+         redirect_to "/#{@user.role}_page
+         "
+     else
+         redirect_to root_url
+     end
  end
 
  def new
      @user = User.new
  end
 
+ def admin_page
+ end
+
+ def doctor_page
+ end
+ 
+ def office_page
+ end
+
+ def patient_page
+ end
+ 
  def create
      @user = User.new(user_params)
      if @user.save
@@ -48,6 +65,10 @@ class UsersController < ApplicationController
      flash[:success] = "User deleted"
      redirect_to users_url
  end
+ 
+ def database
+     @users = User.all
+ end
 
 
 
@@ -55,7 +76,7 @@ class UsersController < ApplicationController
 
  def user_params
      params.require(:user).permit(:name, :email, :password,
-                                  :password_confirmation)
+                                  :password_confirmation, :role)
  end
 
  # Before filters
@@ -68,8 +89,18 @@ class UsersController < ApplicationController
 
  # Confirms an admin user.
  def admin_user
-     redirect_to(root_url) unless current_user.admin?
+     redirect_to(admin_page_url) if current_user.admin?
  end
-
-
+  # Confirms an doctor user.
+ def doctor_user
+     redirect_to(doctor_page_url) if current_user.doctor?
+ end
+  # Confirms an office user.
+ def office_user
+     redirect_to(office_page_url) if current_user.office?
+ end
+  # Confirms an patient user.
+ def patient_user
+     redirect_to(patient_page_url) if current_user.patient?
+ end
 end

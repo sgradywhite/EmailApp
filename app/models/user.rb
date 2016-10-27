@@ -9,7 +9,23 @@ class User < ApplicationRecord
                          uniqueness: { case_sensitive: false }
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
-
+    
+    def admin?
+        role == 'admin'
+    end
+    
+    def patient?
+        role == 'patient'
+    end
+    
+    def office?
+        role == 'office'
+    end
+    
+    def doctor?
+        role == 'doctor'
+    end
+    
     class << self
         # Returns the hash digest of the given string.
         def digest(string)
