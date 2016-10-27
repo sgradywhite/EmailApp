@@ -96,7 +96,7 @@ Rails.application.routes.draw do
     get    'userappointment' => 'users#appointment'
     get    'userdatabase' => 'users#database'
     
-        get 'admin_page' => 'users#admin_page'
+    get 'admin_page' => 'users#admin_page'
     get 'doctor_page' => 'users#doctor_page'
     get 'office_page' => 'users#office_page'
     get 'patient_page' => 'users#patient_page'

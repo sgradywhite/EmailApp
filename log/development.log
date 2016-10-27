@@ -9203,3 +9203,471 @@ Processing by UsersController#database as HTML
 Completed 200 OK in 409ms (Views: 406.7ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 10.240.1.19 at 2016-10-27 15:36:59 +0000
+Cannot render console from 10.240.1.19! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (4603.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (10.0ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 6407ms (Views: 6386.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 10.240.1.17 at 2016-10-27 15:37:46 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (3590.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 4209ms (Views: 4000.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 10.240.0.187 at 2016-10-27 15:38:05 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s8unvGrPQ3nHoBq9mCVnPxGeWMyR66aATVVYKFCOmAc/WShwtKjda1F2FeaeS78sb85nH2QEueuCkoP45knDNw==", "user"=>{"name"=>"Admin", "email"=>"admin123456@example.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "admin123456@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["email", "admin123456@example.org"], ["created_at", 2016-10-27 15:38:06 UTC], ["updated_at", 2016-10-27 15:38:06 UTC], ["password_digest", "$2a$10$fTabCR07JHfj.2s3VCiCMePIaQyAs4gY10At.nUwPxeW17heEwjCK"], ["activation_digest", "$2a$10$I2Y2VThOnM09m4bS5a6KgOcG8l/d/8G8jj8ayOWdnsOMH/uOqaS3O"], ["role", "admin"]]
+  [1m[35m (17.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (185.4ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.8ms)
+UserMailer#account_activation: processed outbound mail in 2390.2ms
+Sent mail to admin123456@example.org (196.3ms)
+Date: Thu, 27 Oct 2016 15:38:14 +0000
+From: noreply@example.com
+To: admin123456@example.org
+Message-ID: <58121f664bedf_80b618ae46c61457@sgradywhite-newapp-3923223.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58121f661d4f0_80b618ae46c61346";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58121f661d4f0_80b618ae46c61346
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Admin,
+
+Welcome to the Bridgeport Medical Center! Click on the link below to activate your account:
+
+https://newapp-sgradywhite.c9users.io/account_activations/ac9lQGb9u9VmBIQFN-zFQw/edit?email=admin123456%40example.org
+
+
+----==_mimepart_58121f661d4f0_80b618ae46c61346
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bridgeport Medical Center</h1>
+
+<p>Hi Admin,</p>
+
+<p>
+Welcome to the Bridgeport Medical Center! Click on the link below to activate your account:
+</p>
+
+<a href="https://newapp-sgradywhite.c9users.io/account_activations/ac9lQGb9u9VmBIQFN-zFQw/edit?email=admin123456%40example.org">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_58121f661d4f0_80b618ae46c61346--
+
+Redirected to http://newapp-sgradywhite.c9users.io:8080/
+Completed 302 Found in 8416ms (ActiveRecord: 21.0ms)
+
+
+Started GET "/" for 10.240.0.186 at 2016-10-27 15:38:14 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 603ms (Views: 601.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/ac9lQGb9u9VmBIQFN-zFQw/edit?email=admin123456%40example.org" for 148.166.224.88 at 2016-10-27 15:38:35 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"admin123456@example.org", "id"=>"ac9lQGb9u9VmBIQFN-zFQw"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin123456@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (14.2ms)[0m  [1m[33mUPDATE "users" SET "activated" = 't', "activated_at" = '2016-10-27 15:38:35.727800' WHERE "users"."id" = ?[0m  [["id", 12]]
+Redirected to https://newapp-sgradywhite.c9users.io/users/12
+Completed 302 Found in 785ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/users/12" for 148.166.224.88 at 2016-10-27 15:38:36 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to https://newapp-sgradywhite.c9users.io/admin_page         
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin_page" for 148.166.224.88 at 2016-10-27 15:38:36 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#admin_page as HTML
+  Rendering users/admin_page.html.erb within layouts/application
+  Rendered users/admin_page.html.erb within layouts/application (211.3ms)
+  Rendered layouts/_shim.html.erb (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (187.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1002ms (Views: 998.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 148.166.224.88 at 2016-10-27 15:43:34 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZJh+Bruh/FXy5Yp8QLLuMJx0Y03/CwN7U7sj0kWdfTopB9f73xpF+EXukUbstXSCKSDKtrv5xmdpc/agnGK9XA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to https://newapp-sgradywhite.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 148.166.224.88 at 2016-10-27 15:43:34 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (25.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 598ms (Views: 596.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 148.166.224.88 at 2016-10-27 15:43:37 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (4402.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (179.1ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 5377ms (Views: 5206.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 148.166.224.88 at 2016-10-27 15:43:59 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLtDdQXJpkZ3Ng3CJ5fjhbWbZM9vp+TWaYAa0xdigmu8Kcy52644VOHgApkh+TuWy8tbHJpI+72mR8EDoaXZWw==", "user"=>{"name"=>"Patient", "email"=>"patient123456@example.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"patient"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "patient123456@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Patient"], ["email", "patient123456@example.org"], ["created_at", 2016-10-27 15:44:00 UTC], ["updated_at", 2016-10-27 15:44:00 UTC], ["password_digest", "$2a$10$FnYt9ovX9OtlAOIpnE1.jO9tAjS4hXhNilc30JRKC3Ztz1BGokcTS"], ["activation_digest", "$2a$10$CpheOOD4bnjCbvKj28XSPe0apUy1P7rut8MMu9yuLdSz88RyyKiT2"], ["role", "patient"]]
+  [1m[35m (16.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.7ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (1.2ms)
+UserMailer#account_activation: processed outbound mail in 184.5ms
+Sent mail to patient123456@example.org (5.0ms)
+Date: Thu, 27 Oct 2016 15:44:01 +0000
+From: noreply@example.com
+To: patient123456@example.org
+Message-ID: <581220c14f7a9_80b618ae200616f6@sgradywhite-newapp-3923223.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_581220c14e45c_80b618ae2006153c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_581220c14e45c_80b618ae2006153c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Patient,
+
+Welcome to the Bridgeport Medical Center! Click on the link below to activate your account:
+
+https://newapp-sgradywhite.c9users.io/account_activations/JVOwft7w1IAYBqE8Fh-F2Q/edit?email=patient123456%40example.org
+
+
+----==_mimepart_581220c14e45c_80b618ae2006153c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bridgeport Medical Center</h1>
+
+<p>Hi Patient,</p>
+
+<p>
+Welcome to the Bridgeport Medical Center! Click on the link below to activate your account:
+</p>
+
+<a href="https://newapp-sgradywhite.c9users.io/account_activations/JVOwft7w1IAYBqE8Fh-F2Q/edit?email=patient123456%40example.org">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_581220c14e45c_80b618ae2006153c--
+
+Redirected to https://newapp-sgradywhite.c9users.io/
+Completed 302 Found in 1424ms (ActiveRecord: 17.5ms)
+
+
+Started GET "/" for 148.166.224.88 at 2016-10-27 15:44:01 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 600ms (Views: 598.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/JVOwft7w1IAYBqE8Fh-F2Q/edit?email=patient123456%40example.org" for 148.166.224.88 at 2016-10-27 15:44:29 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"patient123456@example.org", "id"=>"JVOwft7w1IAYBqE8Fh-F2Q"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "patient123456@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (23.6ms)[0m  [1m[33mUPDATE "users" SET "activated" = 't', "activated_at" = '2016-10-27 15:44:30.113092' WHERE "users"."id" = ?[0m  [["id", 13]]
+Redirected to https://newapp-sgradywhite.c9users.io/users/13
+Completed 302 Found in 966ms (ActiveRecord: 24.1ms)
+
+
+Started GET "/users/13" for 148.166.224.88 at 2016-10-27 15:44:30 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Redirected to https://newapp-sgradywhite.c9users.io/patient_page         
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/patient_page" for 148.166.224.88 at 2016-10-27 15:44:30 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#patient_page as HTML
+  Rendering users/patient_page.html.erb within layouts/application
+  Rendered users/patient_page.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <% provide(:title, @user.name) %>
+    2: 
+    3: 
+    4: <html>
+  
+app/views/users/patient_page.html.erb:1:in `_app_views_users_patient_page_html_erb___2898095765717663443_70116700289700'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (182.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (400.4ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from status_code_with_paginate at /usr/local/rvm/gems/ruby-2.3.0/gems/will_paginate-3.1.0/lib/will_paginate/railtie.rb:49)
+Started GET "/" for 10.240.0.110 at 2016-10-27 15:46:35 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3378.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (597.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 4994ms (Views: 4804.1ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/logout" for 10.240.0.207 at 2016-10-27 15:46:52 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"euBFUcQgpx0QtpLmAQ1m2QBwiwyNJn3V21napbbiDVk3f+ysoJsesKe9idytCvxrtSQi98nUuMnhkQ/Xbx3NPw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Redirected to http://newapp-sgradywhite.c9users.io:8080/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 10.240.0.119 at 2016-10-27 15:46:52 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (7.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 617ms (Views: 615.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.187 at 2016-10-27 15:46:59 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 416ms (Views: 414.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 10.240.1.15 at 2016-10-27 15:47:08 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.2ms)
+  Rendered users/new.html.erb within layouts/application (4000.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 4777ms (Views: 4769.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.240.0.186 at 2016-10-27 15:47:35 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dt3E+Rt+mDfnoV6B1wE3UhpvC/lsnDAeHgsvNPD8NdeCT0s1xRkGJXF3UdrRb+9BZD80KplzL3XRzPTkRjtu5w==", "user"=>{"name"=>"Patient", "email"=>"patient2468@example.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"patient"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "patient2468@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Patient"], ["email", "patient2468@example.org"], ["created_at", 2016-10-27 15:47:35 UTC], ["updated_at", 2016-10-27 15:47:35 UTC], ["password_digest", "$2a$10$mrP9GpdJn3q21bIfIMkEu.rBYyI/rFoO3S/adl7W4t7Hl/idSfbYC"], ["activation_digest", "$2a$10$0/dOuLUeqjdyLXHq/oBrsunZTuc5ycV/eKNw1hRCOvnGDT0/95M1e"], ["role", "patient"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.6ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.4ms)
+UserMailer#account_activation: processed outbound mail in 1386.2ms
+Sent mail to patient2468@example.org (10.1ms)
+Date: Thu, 27 Oct 2016 15:47:40 +0000
+From: noreply@example.com
+To: patient2468@example.org
+Message-ID: <5812219c7f19b_82db1af572014788@sgradywhite-newapp-3923223.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5812219c7d2f7_82db1af57201461d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5812219c7d2f7_82db1af57201461d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Patient,
+
+Welcome to the Bridgeport Medical Center! Click on the link below to activate your account:
+
+https://newapp-sgradywhite.c9users.io/account_activations/nvh-MPDMOsOIDl38DPrc1A/edit?email=patient2468%40example.org
+
+
+----==_mimepart_5812219c7d2f7_82db1af57201461d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bridgeport Medical Center</h1>
+
+<p>Hi Patient,</p>
+
+<p>
+Welcome to the Bridgeport Medical Center! Click on the link below to activate your account:
+</p>
+
+<a href="https://newapp-sgradywhite.c9users.io/account_activations/nvh-MPDMOsOIDl38DPrc1A/edit?email=patient2468%40example.org">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5812219c7d2f7_82db1af57201461d--
+
+Redirected to http://newapp-sgradywhite.c9users.io:8080/
+Completed 302 Found in 5415ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/" for 10.240.0.187 at 2016-10-27 15:47:41 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2409.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 3597ms (Views: 3584.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/nvh-MPDMOsOIDl38DPrc1A/edit?email=patient2468%40example.org" for 148.166.224.88 at 2016-10-27 15:47:55 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"patient2468@example.org", "id"=>"nvh-MPDMOsOIDl38DPrc1A"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "patient2468@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (22.1ms)[0m  [1m[33mUPDATE "users" SET "activated" = 't', "activated_at" = '2016-10-27 15:47:56.507303' WHERE "users"."id" = ?[0m  [["id", 14]]
+Redirected to https://newapp-sgradywhite.c9users.io/users/14
+Completed 302 Found in 620ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/users/14" for 148.166.224.88 at 2016-10-27 15:47:56 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Redirected to https://newapp-sgradywhite.c9users.io/patient_page         
+Completed 302 Found in 587ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/patient_page" for 148.166.224.88 at 2016-10-27 15:47:57 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#patient_page as HTML
+  Rendering users/patient_page.html.erb within layouts/application
+  Rendered users/patient_page.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 403ms (Views: 400.8ms | ActiveRecord: 0.3ms)
+
+

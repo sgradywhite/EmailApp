@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
           redirect_to(admin_page_url)
         elsif user.doctor?
           redirect_to(doctor_page_url)
-        elseif user.office?
+        elsif user.office?
            redirect_to(office_page_url)
         elsif user.patient?
           redirect_to(patient_page_url)
