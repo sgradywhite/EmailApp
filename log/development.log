@@ -8981,3 +8981,225 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 4001ms (Views: 3822.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 10.240.0.110 at 2016-10-27 12:48:15 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3807.3ms)
+  Rendered layouts/_shim.html.erb (1.7ms)
+  Rendered layouts/_header.html.erb (8.6ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 5392ms (Views: 5197.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.240.0.182 at 2016-10-27 12:48:30 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+Started GET "/login" for 10.240.0.206 at 2016-10-27 12:48:34 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered sessions/new.html.erb within layouts/application (3973.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 4602ms (Views: 4595.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/login" for 10.240.0.186 at 2016-10-27 12:48:36 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Processing by SessionsController#new as HTML
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (10.2ms)
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 601ms (Views: 598.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered sessions/new.html.erb within layouts/application (3625.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 6400ms (Views: 6214.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.240.1.15 at 2016-10-27 12:48:48 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TCYgD8sDM3SZhFukEYh+IyK+X2LCveE8JXt4WOIJ2eNtffZ20Ii2AYja4UA06lAq4RPQ20x/ehN+jjOye4Y6mg==", "session"=>{"email"=>"sgradywhite@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sgradywhite@yahoo.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1010ms (Views: 218.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for 10.240.0.206 at 2016-10-27 12:48:59 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1QI4tKlZI+cnIoGr9ATwR4WeyHxs6C9IubXM1U+9mwZ4MQuPGcme6Ne2xvN3Be8KgxqRf9OZhWpq80LLnUfcow==", "session"=>{"email"=>"sgradywhite@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sgradywhite@yahoo.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1599ms (Views: 607.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.240.0.204 at 2016-10-27 12:52:26 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (190.0ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 797ms (Views: 795.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 10.240.0.208 at 2016-10-27 12:52:29 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (197.2ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1006ms (Views: 1002.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.240.0.208 at 2016-10-27 12:52:53 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVEDVunuGAl7ltF4oWnTthXiiYOsyTGlTM1yhQhc2FbFWofLRaoAvyuoQ9/ebClWkhX3QGIcIopY9Lv9Q76krg==", "user"=>{"name"=>"Admin", "email"=>"nimdauser100@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Create my account"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "nimdauser100@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["email", "nimdauser100@gmail.com"], ["created_at", 2016-10-27 12:52:54 UTC], ["updated_at", 2016-10-27 12:52:54 UTC], ["password_digest", "$2a$10$5dYI36s1laIxMKsiUD/u5OMMKv3AP1bMTrzQlPPt25FNbtTpXwmga"], ["activation_digest", "$2a$10$b2TATJSGmfQQBRonY1SeZ.Gm0vEhd02.lE8A4dfsw7.MDOY87hIty"], ["role", "admin"]]
+  [1m[35m (186.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.8ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.8ms)
+UserMailer#account_activation: processed outbound mail in 1405.3ms
+Sent mail to nimdauser100@gmail.com (190.7ms)
+Date: Thu, 27 Oct 2016 12:53:00 +0000
+From: noreply@example.com
+To: nimdauser100@gmail.com
+Message-ID: <5811f8acb213d_775b1f4a52842131@sgradywhite-newapp-3923223.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5811f8acaf29b_775b1f4a5284205d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5811f8acaf29b_775b1f4a5284205d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Admin,
+
+Welcome to the Bridgeport Medical Center! Click on the link below to activate your account:
+
+https://newapp-sgradywhite.c9users.io/account_activations/3PvQivzjbijr61X2Q_xciA/edit?email=nimdauser100%40gmail.com
+
+
+----==_mimepart_5811f8acaf29b_775b1f4a5284205d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bridgeport Medical Center</h1>
+
+<p>Hi Admin,</p>
+
+<p>
+Welcome to the Bridgeport Medical Center! Click on the link below to activate your account:
+</p>
+
+<a href="https://newapp-sgradywhite.c9users.io/account_activations/3PvQivzjbijr61X2Q_xciA/edit?email=nimdauser100%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5811f8acaf29b_775b1f4a5284205d--
+
+Redirected to http://newapp-sgradywhite.c9users.io:8080/
+Completed 302 Found in 7372ms (ActiveRecord: 189.5ms)
+
+
+Started GET "/" for 10.240.0.119 at 2016-10-27 12:53:01 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 403ms (Views: 401.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/3PvQivzjbijr61X2Q_xciA/edit?email=nimdauser100%40gmail.com" for 148.166.224.88 at 2016-10-27 12:53:10 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"nimdauser100@gmail.com", "id"=>"3PvQivzjbijr61X2Q_xciA"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nimdauser100@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (184.9ms)[0m  [1m[33mUPDATE "users" SET "activated" = 't', "activated_at" = '2016-10-27 12:53:10.932705' WHERE "users"."id" = ?[0m  [["id", 11]]
+Redirected to https://newapp-sgradywhite.c9users.io/users/11
+Completed 302 Found in 608ms (ActiveRecord: 185.1ms)
+
+
+Started GET "/users/11" for 148.166.224.88 at 2016-10-27 12:53:11 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Redirected to https://newapp-sgradywhite.c9users.io/admin_page         
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin_page" for 148.166.224.88 at 2016-10-27 12:53:11 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#admin_page as HTML
+  Rendering users/admin_page.html.erb within layouts/application
+  Rendered users/admin_page.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 410ms (Views: 407.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/userdatabase" for 148.166.224.88 at 2016-10-27 12:54:00 +0000
+Cannot render console from 148.166.224.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#database as HTML
+  Rendering users/database.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/database.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 409ms (Views: 406.7ms | ActiveRecord: 0.6ms)
+
+
