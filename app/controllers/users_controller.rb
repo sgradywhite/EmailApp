@@ -44,7 +44,7 @@ class UsersController < ApplicationController
  end
  
  def create
-     @user = User.new(user_params) && User.role == 'patient'
+     @user = User.new(user_params)
      if @user.save
          @user.send_activation_email
          flash[:info] = "You have created your account."

@@ -12564,3 +12564,235 @@ Completed 200 OK in 607ms (Views: 605.7ms | ActiveRecord: 0.0ms)
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35mSQL (208.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+Started GET "/" for 10.240.0.182 at 2016-10-28 02:45:44 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2996.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (184.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 4590ms (Views: 4401.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 10.240.0.241 at 2016-10-28 02:46:33 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (3179.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 3992ms (Views: 3586.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/signup" for 10.240.0.182 at 2016-10-28 02:46:38 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (3006.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 5797ms (Views: 5585.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 10.240.0.186 at 2016-10-28 02:47:03 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbSqurWZnek8uO9P0+apfsRfl6acLARRIL8IK9gt6Cu8MSC5kzmwgAI7shJoV3M4OlSgdD+tB8qdASP39CKzHA==", "user"=>{"name"=>"Babe", "email"=>"babe@example.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"patient"}, "commit"=>"Create my Patient account"}
+Completed 500 Internal Server Error in 606ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `role' for #<Class:0x007fbf153f1020>):
+  
+app/controllers/users_controller.rb:47:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (220.1ms)
+Started GET "/" for 10.240.0.182 at 2016-10-28 02:55:30 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 603ms (Views: 601.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 10.240.0.119 at 2016-10-28 02:55:32 +0000
+Cannot render console from 10.240.0.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 414ms (Views: 412.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.240.0.206 at 2016-10-28 02:55:49 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FTIZIUjvX044F3wAP1IXzQRbw1RPlFjZ14EOV/fSVQKst5Mibk9yJwaUIV2E482L+lD0huwVW0JqPyWL290ONQ==", "user"=>{"name"=>"Mac", "email"=>"mac@example.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"patient"}, "commit"=>"Create my Patient account"}
+Completed 500 Internal Server Error in 612ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `role' for #<Class:0x000000033b5f58>):
+  
+app/controllers/users_controller.rb:47:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (403.0ms)
+Started POST "/users" for 10.240.0.206 at 2016-10-28 02:56:06 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FTIZIUjvX044F3wAP1IXzQRbw1RPlFjZ14EOV/fSVQKst5Mibk9yJwaUIV2E482L+lD0huwVW0JqPyWL290ONQ==", "user"=>{"name"=>"Mac", "email"=>"mac@example.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"patient"}, "commit"=>"Create my Patient account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "mac@example.org"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mac"], ["email", "mac@example.org"], ["created_at", 2016-10-28 02:56:08 UTC], ["updated_at", 2016-10-28 02:56:08 UTC], ["password_digest", "$2a$10$vvmMaPgGNwBSyyDO85CQh.f9CjH6JwGCM4P84PW9a9TxTOBsK2w9K"], ["activation_digest", "$2a$10$wEVA40y50D.anyDZit221Ol4jFmzaoiiho/g7HBcOnOcJCTHUagLu"], ["role", "patient"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (0.6ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.4ms)
+UserMailer#account_activation: processed outbound mail in 1192.3ms
+Sent mail to mac@example.org (9.9ms)
+Date: Fri, 28 Oct 2016 02:56:12 +0000
+From: noreply@example.com
+To: mac@example.org
+Message-ID: <5812be4c80c3d_bcba170bdf8145e7@sgradywhite-newapp-3923223.mail>
+Subject: Account Created Status
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5812be4c7ee97_bcba170bdf814441";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5812be4c7ee97_bcba170bdf814441
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Mac,
+
+Welcome to the Bridgeport Medical Center! 
+
+
+
+
+----==_mimepart_5812be4c7ee97_bcba170bdf814441
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Bridgeport Medical Center</h1>
+
+<p>Hi Mac,</p>
+
+<p>
+Welcome to the Bridgeport Medical Center!
+</p>
+
+
+  </body>
+</html>
+
+----==_mimepart_5812be4c7ee97_bcba170bdf814441--
+
+Redirected to http://newapp-sgradywhite.c9users.io:8080/
+Completed 302 Found in 5581ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/" for 10.240.0.241 at 2016-10-28 02:56:12 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 411ms (Views: 409.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.240.0.204 at 2016-10-28 02:56:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 398ms (Views: 397.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.240.0.206 at 2016-10-28 02:56:27 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LHAqT2YMAjw4tMtmqzP2k5MnyNFHjnEI5HgsMSrLVTxFF1EfKc62Nby3AGOl0LM8NhMQayyPQV/J5PZH5ax71A==", "session"=>{"email"=>"mac@example.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mac@example.org"], ["LIMIT", 1]]
+Redirected to http://newapp-sgradywhite.c9users.io:8080/patient_page
+Completed 302 Found in 596ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/patient_page" for 10.240.0.241 at 2016-10-28 02:56:28 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#patient_page as HTML
+  Rendering users/patient_page.html.erb within layouts/application
+  Rendered users/patient_page.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (200.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 602ms (Views: 598.7ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/logout" for 10.240.0.187 at 2016-10-28 02:56:33 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wwPWkCFFyrKVcVx5WMCC8I2Lury3Z/UiaCaXswZXM7ORMFrbDZzfTHOnSsX0h2l9qWXIZdTGzjyp8hlCD8vl1w=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Redirected to http://newapp-sgradywhite.c9users.io:8080/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 10.240.0.208 at 2016-10-28 02:56:33 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 404ms (Views: 402.4ms | ActiveRecord: 0.0ms)
+
+
