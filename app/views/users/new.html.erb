@@ -16,9 +16,12 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-      <%= f.select :role, %w(admin patient doctor office) %>
       
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <div style = "visibility: hidden;">
+      <%= f.select :role, %w(patient) %>
+      </div>
+      
+      <%= f.submit "Create my Patient account", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

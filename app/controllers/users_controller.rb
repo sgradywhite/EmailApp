@@ -3,6 +3,9 @@ class UsersController < ApplicationController
     :following, :followers]
     before_action :correct_user,   only: [:edit, :update]
     before_action :admin_user,     only: :destroy
+    before_action :office_user,    only: :destory
+    before_action :doctor_user,    only: :destory
+    before_action :patient_user,   only: :destory
 
 
  def index
@@ -38,7 +41,7 @@ class UsersController < ApplicationController
      @user = User.new(user_params)
      if @user.save
          @user.send_activation_email
-         flash[:info] = "Please check your email to activate your account."
+         flash[:info] = "You have created your account."
          redirect_to root_url
          else
          render 'new'
