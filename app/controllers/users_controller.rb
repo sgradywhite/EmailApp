@@ -14,10 +14,16 @@ class UsersController < ApplicationController
 
  def show
      @user = User.find(params[:id])
-     if @user.activated?
-         redirect_to "/#{@user.role}_page"
+     if user.admin?
+       redirect_to(admin_page_url)
+     elsif user.doctor?
+       redirect_to(doctor_page_url)
+     elsif user.office?
+      redirect_to(office_page_url)
+     elsif user.patient?
+      redirect_to(patient_page_url)
      else
-         redirect_to root_url
+      redirect_to(root_url)
      end
  end
 
@@ -38,7 +44,7 @@ class UsersController < ApplicationController
  end
  
  def create
-     @user = User.new(user_params)
+     @user = User.new(user_params) && User.role == 'patient'
      if @user.save
          @user.send_activation_email
          flash[:info] = "You have created your account."
